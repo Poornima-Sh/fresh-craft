@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Craft | Premium Ethical Apparel Sourcing & Manufacturing</title>
+  <meta name="description" content="Fresh Craft is a designer apparel sourcing company connecting global brands with certified ethical manufacturers, premium sustainable fabrics, and expert logistics.">
+  
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="Fresh Craft | Premium Ethical Apparel Sourcing">
+  <meta property="og:description" content="Global apparel sourcing, custom manufacturing, and logistics with a commitment to ethics and sustainability.">
+  <meta property="og:image" content="assets/images/hero_bg.png">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@200;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Custom Cursor (Modern UI Element) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+  <div class="custom-cursor-dot" id="custom-cursor-dot" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header id="main-header">
+    <div class="header-container">
+      <a href="#" class="logo" id="logo-link">
+        <span class="logo-text">FRESH CRAFT</span>
+        <span class="logo-subtext">SOURCING</span>
+      </a>
+      
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#about" class="nav-link">Philosophy</a></li>
+          <li><a href="#network" class="nav-link">Network</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#fabrics" class="nav-link">Materials</a></li>
+          <li><a href="#sustainability" class="nav-link">Ethics</a></li>
+          <li><a href="#contact" class="nav-link btn-header-cta">Inquire</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="#about" class="mobile-nav-link">Philosophy</a></li>
+      <li><a href="#network" class="mobile-nav-link">Network</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#fabrics" class="mobile-nav-link">Materials</a></li>
+      <li><a href="#sustainability" class="mobile-nav-link">Ethics</a></li>
+      <li><a href="#contact" class="mobile-nav-link mobile-btn-cta">Inquire Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-wrapper">
+      <img src="assets/images/hero_bg.png" alt="Apparel Sourcing Table with sketches and fabric spools" class="hero-bg-image" fetchpriority="high">
+      <div class="hero-overlay"></div>
+    </div>
+    
+    <div class="hero-content-container">
+      <div class="hero-text-content">
+        <div class="hero-tagline scroll-reveal">SOURCING THE FUTURE OF FASHION</div>
+        <h1 class="hero-title scroll-reveal">Ethically Sourced.<br>Expertly Crafted.<br><span class="highlight-text">Forward Apparel.</span></h1>
+        <p class="hero-subtitle scroll-reveal">We bridge the gap between visionary designers and global ethical manufacturing, bringing premium quality garments to life from fiber to finished product.</p>
+        <div class="hero-actions scroll-reveal">
+          <a href="#contact" class="btn btn-primary" id="hero-primary-cta">Start Sourcing</a>
+          <a href="#services" class="btn btn-secondary" id="hero-secondary-cta">Explore Services</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <a href="#about" class="scroll-indicator-link">
+        <span class="scroll-text">Explore</span>
+        <svg class="scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section: Philosophy (About Us) -->
+  <section class="about-section" id="about">
+    <div class="container grid-2">
+      <div class="about-image-wrapper scroll-reveal-left">
+        <img src="assets/images/sustainable_atelier.png" alt="Fresh Craft modern sustainable design studio and atelier" class="about-img" loading="lazy">
+        <div class="about-image-overlay-card glass-panel">
+          <span class="card-number">100%</span>
+          <span class="card-text">Traceable supply chain from organic source to hanger.</span>
+        </div>
+      </div>
+      
+      <div class="about-content scroll-reveal-right">
+        <span class="section-badge">OUR PHILOSOPHY</span>
+        <h2 class="section-title">Where craftsmanship meets conscience.</h2>
+        <p class="about-text-lead">Fresh Craft was founded to solve a critical challenge for modern fashion brands: how to scale apparel production without compromising on design, quality, or ethical standards.</p>
+        <p class="about-text-body">We are not just sourcing agents; we are design-focused production partners. We vet every spinning mill, dye house, and cut-and-sew facility in our global network, ensuring they meet the highest certifications. Our hands-on team oversees fabric development, fits, sampling, and final QC checks, giving designers peace of mind.</p>
+        
+        <div class="philosophy-points">
+          <div class="point-item">
+            <div class="point-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#d4af37" stroke-width="1.5"/>
+                <path d="M7 12.5L10 15.5L17 8.5" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="point-text">
+              <h3>Transparent Sourcing</h3>
+              <p>Know exactly where your fabrics are grown, woven, dyed, and sewn.</p>
+            </div>
+          </div>
+          <div class="point-item">
+            <div class="point-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#d4af37" stroke-width="1.5"/>
+                <path d="M12 8V16M8 12H16" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="point-text">
+              <h3>Design Integration</h3>
+              <p>We speak the language of designers. We interpret tech packs, grade fits, and select premium trims.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Sourcing Network -->
+  <section class="network-section" id="network">
+    <div class="container">
+      <div class="section-header-center scroll-reveal">
+        <span class="section-badge">GLOBAL FOOTPRINT</span>
+        <h2 class="section-title">A Curated Network of Excellence</h2>
+        <p class="section-subtitle">We manage a highly specialized manufacturing ecosystem spanning key global regions, matching each brand’s aesthetic and volume requirements to the right partner.</p>
+      </div>
+
+      <div class="network-grid">
+        <!-- Region 1 -->
+        <div class="network-card glass-panel scroll-reveal" style="animation-delay: 0.1s;">
+          <div class="card-bg-glow"></div>
+          <div class="network-region-info">
+            <span class="country-tag">PORTUGAL & ITALY</span>
+            <h3>Luxury Weaves & Knitwear</h3>
+            <p>Our European partners specialize in small-batch high-end tailoring, circular knits, and premium luxury linen. Ideal for boutique collections demanding couture-level precision.</p>
+            <div class="specialties">
+              <span class="spec-tag">Double Weaves</span>
+              <span class="spec-tag">Organic Wool</span>
+              <span class="spec-tag">Luxury Linen</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Region 2 -->
+        <div class="network-card glass-panel scroll-reveal" style="animation-delay: 0.2s;">
+          <div class="card-bg-glow"></div>
+          <div class="network-region-info">
+            <span class="country-tag">VIETNAM & INDONESIA</span>
+            <h3>Activewear & Technical Outerwear</h3>
+            <p>Precision-bonded seams, water-resistant layers, and recycled elastane blends. Fully audited LEED-certified factories equipped with high-frequency welding machines.</p>
+            <div class="specialties">
+              <span class="spec-tag">Seam Taping</span>
+              <span class="spec-tag">Econyl® Nylon</span>
+              <span class="spec-tag">High-Elastane</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Region 3 -->
+        <div class="network-card glass-panel scroll-reveal" style="animation-delay: 0.3s;">
+          <div class="card-bg-glow"></div>
+          <div class="network-region-info">
+            <span class="country-tag">INDIA & BANGLADESH</span>
+            <h3>Organic Cotton & Fine Wovens</h3>
+            <p>The epicenters of sustainable agriculture. Our partner mills produce high-grade organic supima cotton, intricate hand-looms, and sustainable denim with closed-loop water treatment.</p>
+            <div class="specialties">
+              <span class="spec-tag">GOTS Cotton</span>
+              <span class="spec-tag">Ozone Denim</span>
+              <span class="spec-tag">Linen Blends</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Region 4 -->
+        <div class="network-card glass-panel scroll-reveal" style="animation-delay: 0.4s;">
+          <div class="card-bg-glow"></div>
+          <div class="network-region-info">
+            <span class="country-tag">PERU & BOLIVIA</span>
+            <h3>Premium Fibers & Fine Wool</h3>
+            <p>Partnering with fair-trade cooperatives in the Andes to source trace-certified baby alpaca wool, merino, and organic pima knits. Renowned for unparalleled softness and thermal qualities.</p>
+            <div class="specialties">
+              <span class="spec-tag">Alpaca</span>
+              <span class="spec-tag">Merino Wool</span>
+              <span class="spec-tag">Fair-Trade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Services -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="grid-2">
+        <div class="services-header-sticky">
+          <span class="section-badge">WHAT WE DO</span>
+          <h2 class="section-title">End-to-End Production Management</h2>
+          <p class="about-text-lead">We lift the operational burden off your design team. From the initial fiber specification to customs clearance, we own the supply chain execution.</p>
+          <div class="services-interactive-indicator">
+            <span class="pulse-dot"></span>
+            Hover over a service card to explore details
+          </div>
+        </div>
+
+        <div class="services-list-container">
+          <!-- Service Item 1 -->
+          <div class="service-detail-card glass-panel scroll-reveal">
+            <div class="service-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="8" fill="rgba(212, 175, 55, 0.1)"/>
+                <path d="M12 16H28M12 20H28M12 24H20" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M28 24C28 26.2091 26.2091 28 24 28C21.7909 28 20 26.2091 20 24C20 21.7909 21.7909 20 24 20C26.2091 20 28 21.7909 28 24Z" stroke="#d4af37" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="service-content-block">
+              <h3>01 / Material & Fabric Sourcing</h3>
+              <p>We source raw yarns, develop custom knits and weaves, and supply low-impact dyed textiles. We verify all GOTS, GRS, and FSC certifications at the source, ensuring raw materials align with your sustainability targets.</p>
+              <ul class="service-bullet-list">
+                <li>Custom textile development</li>
+                <li>Sustainable fiber sourcing (Organic, Recycled, Smart-cell)</li>
+                <li>Certification vetting & verification mapping</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service Item 2 -->
+          <div class="service-detail-card glass-panel scroll-reveal">
+            <div class="service-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="8" fill="rgba(212, 175, 55, 0.1)"/>
+                <path d="M14 12H26L30 18V28C30 29.1046 29.1046 30 28 30H12C10.8954 30 10 29.1046 10 28V18L14 12Z" stroke="#d4af37" stroke-width="1.5"/>
+                <path d="M14 12V18M26 12V18" stroke="#d4af37" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="service-content-block">
+              <h3>02 / Custom Manufacturing & Sampling</h3>
+              <p>Our local teams interpret your tech packs, create precise samples, manage fit grading, and fabricate photo-shoot samples. We optimize pattern layouts to reduce cut waste before starting bulk runs.</p>
+              <ul class="service-bullet-list">
+                <li>Proto sample & SMS creation</li>
+                <li>Size grading & digital pattern files</li>
+                <li>Yield optimization & marker planning</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service Item 3 -->
+          <div class="service-detail-card glass-panel scroll-reveal">
+            <div class="service-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="8" fill="rgba(212, 175, 55, 0.1)"/>
+                <circle cx="20" cy="20" r="10" stroke="#d4af37" stroke-width="1.5"/>
+                <path d="M17 20L19 22L23 18" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-content-block">
+              <h3>03 / Rigid Quality Assurance</h3>
+              <p>We deploy inspectors directly to factory floors. We carry out fabric checks, inline stitching reviews, and final pre-shipment inspections following AQL 2.5 standards to guarantee zero-defect shipments.</p>
+              <ul class="service-bullet-list">
+                <li>AQL 2.5 inline & final inspections</li>
+                <li>Color matching verification (Spectrophotometer audits)</li>
+                <li>Shrinkage, twist, and seam strength testing</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service Item 4 -->
+          <div class="service-detail-card glass-panel scroll-reveal">
+            <div class="service-icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="40" height="40" rx="8" fill="rgba(212, 175, 55, 0.1)"/>
+                <path d="M12 18H28M12 22H28M12 26H20" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M26 12L20 18L14 12" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="service-content-block">
+              <h3>04 / Global Logistics & Customs</h3>
+              <p>We handle export paperwork, consolidate shipments, coordinate ocean/air shipping, and manage customs clearance, delivering direct to your distribution centers on a landed basis (DDP).</p>
+              <ul class="service-bullet-list">
+                <li>Landed price modeling (DDP, FOB, CIF)</li>
+                <li>HS Code classification & duty optimization</li>
+                <li>Real-time shipment tracking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Fabric Showcase (Interactive Filter) -->
+  <section class="fabrics-section" id="fabrics">
+    <div class="container">
+      <div class="section-header-center scroll-reveal">
+        <span class="section-badge">MATERIAL LIBRARY</span>
+        <h2 class="section-title">The Textile Exhibition</h2>
+        <p class="section-subtitle">A curated preview of our custom-developed organic, recycled, and technical fabrics available for custom manufacturing runs.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="filter-controls scroll-reveal" role="tablist" aria-label="Filter fabrics by type">
+        <button class="filter-btn active" role="tab" aria-selected="true" data-filter="all">All Materials</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="organic">Organic & Natural</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="luxury">Luxury Fibers</button>
+        <button class="filter-btn" role="tab" aria-selected="false" data-filter="technical">Technical & Performance</button>
+      </div>
+
+      <!-- Grid Container -->
+      <div class="fabrics-showcase-grid scroll-reveal">
+        
+        <!-- Showcase Image Hero Card (Occupies 2 columns on desktop) -->
+        <div class="fabric-hero-card glass-panel" data-category="organic luxury technical">
+          <img src="assets/images/fabric_swatches.png" alt="Stack of organic, luxury and technical fabrics" class="fabric-hero-img" loading="lazy">
+          <div class="fabric-hero-content">
+            <span class="badge-accent">Featured Swatches</span>
+            <h3>Premium Texture Stack</h3>
+            <p>Our signature sustainable material blend showcase including GOTS organic cotton, fine linen, recycled elastane, and temperature-regulating technical wool.</p>
+          </div>
+        </div>
+
+        <!-- Fabric 1 -->
+        <div class="fabric-card glass-panel" data-category="organic">
+          <div class="fabric-info">
+            <span class="fabric-type">100% GOTS Organic Cotton</span>
+            <h3>Organic Pique Knit</h3>
+            <p>Weight: 220 GSM. Grown without pesticides, dyed with low-impact certified pigment. Exceptional hand-feel and structural integrity for premium polos.</p>
+            <div class="fabric-meta">
+              <span>Eco-dyed</span>
+              <span>220 GSM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fabric 2 -->
+        <div class="fabric-card glass-panel" data-category="luxury">
+          <div class="fabric-info">
+            <span class="fabric-type">100% Traceable Linen</span>
+            <h3>Belgian Flax Linen</h3>
+            <p>Weight: 160 GSM. Naturally thermoregulating, pre-washed for extra softness. Sourced from sustainable European flax farms requiring no irrigation.</p>
+            <div class="fabric-meta">
+              <span>Zero Irrigation</span>
+              <span>160 GSM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fabric 3 -->
+        <div class="fabric-card glass-panel" data-category="technical">
+          <div class="fabric-info">
+            <span class="fabric-type">Recycled Ocean Nylon & Elastane</span>
+            <h3>Econyl® Active Knit</h3>
+            <p>Weight: 280 GSM. Made from recycled fishing nets. Highly elastic, moisture-wicking, with UPF 50+ rating. Excellent recovery for sports apparel.</p>
+            <div class="fabric-meta">
+              <span>UPF 50+</span>
+              <span>280 GSM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fabric 4 -->
+        <div class="fabric-card glass-panel" data-category="luxury">
+          <div class="fabric-info">
+            <span class="fabric-type">Merino Wool & Organic Silk</span>
+            <h3>Thermal Silk Knit</h3>
+            <p>Weight: 180 GSM. A premium lightweight blend offering incredible warmth, sheen, and anti-microbial protection. Ideal for luxury layering pieces.</p>
+            <div class="fabric-meta">
+              <span>Anti-microbial</span>
+              <span>180 GSM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Sustainability & Certifications -->
+  <section class="sustainability-section" id="sustainability">
+    <div class="container">
+      <div class="sustainability-grid grid-2">
+        <div class="sust-content scroll-reveal-left">
+          <span class="section-badge-white">SUSTAINABLE PLEDGE</span>
+          <h2 class="section-title-white">We design supply chains with future generations in mind.</h2>
+          <p class="sust-desc">Fashion shouldn't cost the Earth. We actively audit every facility to ensure energy reduction, closed-loop water treatment, and zero hazardous chemical discharge. We partner only with mills holding verified third-party eco-certifications.</p>
+          
+          <div class="certification-logos">
+            <div class="cert-item" title="Global Organic Textile Standard">
+              <span class="cert-abbr">GOTS</span>
+              <span class="cert-desc">Organic Fiber Standard</span>
+            </div>
+            <div class="cert-item" title="OEKO-TEX Standard 100">
+              <span class="cert-abbr">OEKO-TEX</span>
+              <span class="cert-desc">Free from harmful chemicals</span>
+            </div>
+            <div class="cert-item" title="Fair Trade Certified">
+              <span class="cert-abbr">FAIR TRADE</span>
+              <span class="cert-desc">Ethical working conditions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sust-stats-grid scroll-reveal-right">
+          <!-- Stat 1 -->
+          <div class="stat-card glass-panel-dark">
+            <div class="stat-num" id="stat-water">85%</div>
+            <div class="stat-label">Water Saved in Denim Finishing (Ozone Tech)</div>
+          </div>
+          <!-- Stat 2 -->
+          <div class="stat-card glass-panel-dark">
+            <div class="stat-num" id="stat-renewable">100%</div>
+            <div class="stat-label">Certified Renewable Energy in EU Partner Factories</div>
+          </div>
+          <!-- Stat 3 -->
+          <div class="stat-card glass-panel-dark">
+            <div class="stat-num" id="stat-wage">1.5x</div>
+            <div class="stat-label">Minimum Wage Premium for Sewing Craftsmen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Contact Form -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="grid-2">
+        <div class="contact-info scroll-reveal-left">
+          <span class="section-badge">GET IN TOUCH</span>
+          <h2 class="section-title">Let's craft your next collection together.</h2>
+          <p class="about-text-lead">Ready to elevate your sourcing standards? Share your project parameters below, and one of our dedicated production directors will reach out in 24 hours.</p>
+          
+          <div class="contact-methods">
+            <div class="contact-method-item">
+              <div class="method-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 8L10.89 13.26C11.56 13.71 12.44 13.71 13.11 13.26L21 8M5 19H19C20.1 19 21 18.1 21 17V7C21 5.9 20.1 5 19 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19Z" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="method-detail">
+                <h4>General & Design Inquiries</h4>
+                <a href="mailto:hello@freshcraftsourcing.com">hello@freshcraftsourcing.com</a>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="method-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2Z" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="9" r="3" stroke="#d4af37" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="method-detail">
+                <h4>Design Hubs</h4>
+                <p>Lisbon, Portugal &bull; Bengaluru, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper glass-panel scroll-reveal-right">
+          <form id="sourcing-inquiry-form" class="inquiry-form" novalidate>
+            <div class="form-row">
+              <div class="form-group floating-group">
+                <input type="text" id="contact-name" name="name" required placeholder=" " class="form-input">
+                <label for="contact-name" class="floating-label">Your Name</label>
+                <span class="error-msg" id="name-error">Please enter your name</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group floating-group">
+                <input type="email" id="contact-email" name="email" required placeholder=" " class="form-input">
+                <label for="contact-email" class="floating-label">Work Email</label>
+                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group floating-group">
+                <input type="text" id="contact-company" name="company" placeholder=" " class="form-input">
+                <label for="contact-company" class="floating-label">Brand/Company Name</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="est-volume" class="select-label">Estimated Production Volume (per style)</label>
+                <select id="est-volume" name="volume" class="form-select">
+                  <option value="under-500">Under 500 units</option>
+                  <option value="500-2000" selected>500 - 2,000 units</option>
+                  <option value="2000-5000">2,000 - 5,000 units</option>
+                  <option value="over-5000">Over 5,000 units</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group floating-group">
+                <textarea id="contact-details" name="details" rows="4" required placeholder=" " class="form-input form-textarea"></textarea>
+                <label for="contact-details" class="floating-label">Tell us about your sourcing requirements...</label>
+                <span class="error-msg" id="details-error">Please share some details about your collection</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" class="btn btn-submit btn-primary" id="submit-inquiry">
+                <span class="btn-text">Submit Sourcing Inquiry</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+            
+            <!-- Success/Error Message Containers -->
+            <div class="form-status-container" id="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-text">FRESH CRAFT</span>
+          <span class="logo-subtext">SOURCING</span>
+        </a>
+        <p>Premium ethical apparel sourcing, matching high-end design with certified sustainable manufacturing networks worldwide.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#about">Philosophy</a></li>
+          <li><a href="#network">Sourcing Network</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#fabrics">Material Library</a></li>
+          <li><a href="#sustainability">Ethics & Standards</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-certifications">
+        <h4>Our Networks hold</h4>
+        <div class="footer-cert-tags">
+          <span>GOTS</span>
+          <span>OEKO-TEX® 100</span>
+          <span>GRS</span>
+          <span>FSC</span>
+          <span>SA8000</span>
+          <span>LEED Gold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container flex-space">
+        <p>&copy; 2026 Fresh Craft Sourcing Ltd. All rights reserved.</p>
+        <p class="designer-credit">Crafted for Forward Fashion</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
