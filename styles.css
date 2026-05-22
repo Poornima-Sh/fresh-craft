@@ -333,11 +333,9 @@ header {
 }
 
 .logo-img {
-  height: 90px;
+  height: 100px;
   width: auto;
   object-fit: contain;
-  mix-blend-mode: screen; /* Drops out pure black perfectly */
-  filter: contrast(1.5) brightness(0.7); /* Crushes the dark grey background to black, keeping gold visible */
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s ease;
 }
 
