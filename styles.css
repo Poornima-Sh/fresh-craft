@@ -336,15 +336,13 @@ header {
   height: 90px;
   width: auto;
   object-fit: contain;
-  mix-blend-mode: lighten; /* Blends the dark background of the image with the header */
-  transform: scale(2.2);
-  transform-origin: left center;
+  mix-blend-mode: screen; /* Drops out pure black perfectly */
+  filter: contrast(1.5) brightness(0.7); /* Crushes the dark grey background to black, keeping gold visible */
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s ease;
-  margin-left: 20px; /* Offset the scale */
 }
 
 .logo:hover .logo-img {
-  transform: scale(2.3);
+  transform: scale(1.03);
 }
 
 .desktop-nav ul {
