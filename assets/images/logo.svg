@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <!-- Metallic gradient for the needle -->
+    <linearGradient id="needle-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  
+  <g class="logo-mark" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- The Thread (FC Monogram) -->
+    <!-- "f" hook, stem, and crossbar -->
+    <path class="thread-f" d="M 40,24 C 28,24 24,32 24,44 L 24,74" stroke-width="2.2" />
+    <path class="thread-f-cross" d="M 16,48 L 32,48" stroke-width="2.2" />
+    
+    <!-- "c" loop -->
+    <path class="thread-c" d="M 50,34 C 68,34 76,44 76,56 C 76,68 64,74 50,74" stroke-width="2.2" />
+    
+    <!-- Connection loops weaving around the needle (thread look) -->
+    <path class="thread-weave-1" d="M 40,24 C 44,24 48,26 50,30" />
+    <path class="thread-weave-2" d="M 50,56 C 44,56 38,62 38,68 C 38,72 41,74 44,74 L 50,74" />
+
+    <!-- Needle (Drawn as a filled path with evenodd fill-rule for the cutout eye) -->
+    <path class="needle" d="M 48.2,22 L 48.2,74 L 50,82 L 51.8,74 L 51.8,22 C 51.8,17 48.2,17 48.2,22 Z M 49.3,20.5 L 49.3,27.5 C 49.3,28 50.7,28 50.7,27.5 L 50.7,20.5 C 50.7,20 49.3,20 49.3,20.5 Z" fill="currentColor" fill-rule="evenodd" stroke="none" />
+    
+    <!-- Button -->
+    <circle class="button-rim" cx="50" cy="91" r="6" stroke-width="1.6" fill="none" />
+    <circle class="button-hole" cx="48" cy="89" r="0.6" fill="currentColor" stroke="none" />
+    <circle class="button-hole" cx="52" cy="89" r="0.6" fill="currentColor" stroke="none" />
+    <circle class="button-hole" cx="48" cy="93" r="0.6" fill="currentColor" stroke="none" />
+    <circle class="button-hole" cx="52" cy="93" r="0.6" fill="currentColor" stroke="none" />
+  </g>
+</svg>
