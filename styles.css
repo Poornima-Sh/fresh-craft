@@ -304,7 +304,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  height: 100px; /* Initial Height */
+  height: 120px; /* Initial Height */
   z-index: 1000;
   background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.0);
@@ -333,13 +333,13 @@ header {
 }
 
 .logo-icon-wrapper {
-  width: 44px;
-  height: 44px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-primary);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), width 0.5s ease, height 0.5s ease;
 }
 
 .logo-svg {
@@ -389,11 +389,11 @@ header {
 
 .logo-text {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: 0.15em;
   color: var(--color-white);
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, font-size 0.5s ease;
 }
 
 .logo:hover .logo-text {
@@ -402,12 +402,12 @@ header {
 
 .logo-subtext {
   font-family: var(--font-sans);
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   letter-spacing: 0.4em;
   color: var(--color-primary);
   margin-top: 2px;
   opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, font-size 0.5s ease;
 }
 
 .logo:hover .logo-subtext {
@@ -564,10 +564,29 @@ header {
 @supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
   @keyframes shrink {
     to {
-      height: 70px;
+      height: 80px;
       background-color: rgba(12, 14, 18, 0.96);
       border-color: rgba(255, 255, 255, 0.06);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  @keyframes shrink-logo-icon {
+    to {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  @keyframes shrink-logo-text {
+    to {
+      font-size: 1.4rem;
+    }
+  }
+
+  @keyframes shrink-logo-subtext {
+    to {
+      font-size: 0.65rem;
     }
   }
 
@@ -577,14 +596,45 @@ header {
     animation-range: 0px 120px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.0);
   }
+
+  header .logo-icon-wrapper {
+    animation: shrink-logo-icon auto linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 120px;
+  }
+
+  header .logo-text {
+    animation: shrink-logo-text auto linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 120px;
+  }
+
+  header .logo-subtext {
+    animation: shrink-logo-subtext auto linear both;
+    animation-timeline: scroll(block root);
+    animation-range: 0px 120px;
+  }
 }
 
 /* Header JS fallback styles (applied via JS class when scroll-driven timeline not supported) */
 header.header-shrunk {
-  height: 70px;
+  height: 80px;
   background-color: rgba(12, 14, 18, 0.96);
   border-color: rgba(255, 255, 255, 0.06);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+header.header-shrunk .logo-icon-wrapper {
+  width: 48px;
+  height: 48px;
+}
+
+header.header-shrunk .logo-text {
+  font-size: 1.4rem;
+}
+
+header.header-shrunk .logo-subtext {
+  font-size: 0.65rem;
 }
 
 /* --- Hero Section & Parallax Layout --- */
