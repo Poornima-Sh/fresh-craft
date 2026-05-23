@@ -34,11 +34,11 @@
   --spacing-xl: 8rem;
 
   /* Design Accents */
-  --border-radius: 12px;
-  --border-radius-lg: 24px;
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(0, 0, 0, 0.05);
-  --glass-shadow: rgba(0, 0, 0, 0.05);
+  --border-radius: 24px;
+  --border-radius-lg: 40px;
+  --glass-bg: rgba(245, 245, 245, 0.85);
+  --glass-border: rgba(111, 78, 55, 0.08);
+  --glass-shadow: rgba(111, 78, 55, 0.05);
   
   /* Transition timings */
   --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -75,8 +75,8 @@ body {
   background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.15);
-  border-radius: 4px;
+  background: rgba(161, 111, 104, 0.4);
+  border-radius: 8px;
   border: 2px solid var(--color-bg);
   transition: var(--transition-fast);
 }
@@ -86,9 +86,9 @@ body {
 
 /* Typography Base styling */
 h1, h2, h3, h4 {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  color: var(--color-white);
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--color-text-primary);
   line-height: 1.2;
 }
 
@@ -175,25 +175,25 @@ a {
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-text-dark);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 24px rgba(111, 78, 55, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-hover);
+  background-color: var(--color-accent);
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 12px 30px rgba(161, 111, 104, 0.3);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-text-primary);
   backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: var(--color-white);
+  background-color: rgba(111, 78, 55, 0.05);
+  border-color: var(--color-text-primary);
   transform: translateY(-2px);
 }
 
@@ -502,39 +502,10 @@ header.header-shrunk .logo-img {
 .hero-section {
   position: relative;
   min-height: 100vh;
+  background-color: var(--color-surface); /* Almond Cream */
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
   overflow: hidden;
-}
-
-.hero-bg-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.hero-bg-image {
-  width: 100%;
-  height: 120%; /* Taller for parallax translate */
-  object-fit: cover;
-  opacity: 0.35;
-  transform: translateY(0);
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 60% 40%, rgba(245, 245, 245, 0.4) 0%, rgba(245, 245, 245, 0.95) 80%),
-              linear-gradient(to bottom, rgba(245, 245, 245, 0.1), var(--color-bg));
-  z-index: 2;
 }
 
 .hero-content-container {
@@ -649,7 +620,8 @@ header.header-shrunk .logo-img {
 /* --- Philosophy (About Us) Section Styles --- */
 .about-section {
   padding: var(--spacing-xl) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background-color: var(--color-surface); /* Almond Cream */
+  border-bottom: 1px solid rgba(111, 78, 55, 0.05);
 }
 
 .about-image-wrapper {
@@ -661,9 +633,9 @@ header.header-shrunk .logo-img {
   width: 100%;
   height: 500px;
   object-fit: cover;
-  border-radius: var(--border-radius);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border-radius: var(--border-radius-lg);
+  border: none;
+  box-shadow: var(--glass-shadow);
 }
 
 .about-image-overlay-card {
@@ -754,8 +726,8 @@ header.header-shrunk .logo-img {
 /* --- Sourcing Network Section --- */
 .network-section {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-bg-darker);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background-color: var(--color-bg); /* White Smoke */
+  border-bottom: 1px solid rgba(111, 78, 55, 0.05);
 }
 
 .network-grid {
@@ -781,8 +753,8 @@ header.header-shrunk .logo-img {
 
 .network-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(212, 175, 55, 0.15);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(161, 111, 104, 0.15);
+  box-shadow: 0 15px 40px rgba(111, 78, 55, 0.08);
 }
 
 /* Interactive card glow effect */
@@ -1135,7 +1107,7 @@ header.header-shrunk .logo-img {
 }
 
 .sust-desc {
-  color: rgba(255,255,255,0.7);
+  color: var(--color-text-secondary);
   font-size: 1.15rem;
   margin-bottom: var(--spacing-lg);
   line-height: 1.6;
@@ -1148,8 +1120,8 @@ header.header-shrunk .logo-img {
 }
 
 .cert-item {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(111, 78, 55, 0.1);
+  background: rgba(111, 78, 55, 0.03);
   padding: 1rem var(--spacing-sm);
   border-radius: var(--border-radius);
   text-align: center;
@@ -1169,7 +1141,7 @@ header.header-shrunk .logo-img {
 
 .cert-desc {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.5);
+  color: var(--color-text-secondary);
   text-transform: uppercase;
 }
 
@@ -1202,10 +1174,10 @@ header.header-shrunk .logo-img {
   font-family: var(--font-display);
   font-size: 3.5rem;
   font-weight: 600;
-  color: var(--color-white);
+  color: var(--color-primary);
   line-height: 1;
   margin-bottom: 0.5rem;
-  background: linear-gradient(to right, var(--color-white), var(--color-text-secondary));
+  background: linear-gradient(to right, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1219,8 +1191,8 @@ header.header-shrunk .logo-img {
 /* --- Contact & Sourcing Inquiry Form --- */
 .contact-section {
   padding: var(--spacing-xl) 0;
-  background-color: var(--color-bg-darker);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  background-color: var(--color-primary); /* Coffee Bean */
+  border-bottom: none;
 }
 
 .contact-info {
@@ -1247,8 +1219,8 @@ header.header-shrunk .logo-img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  background: rgba(232, 217, 197, 0.1);
+  border: 1px solid rgba(232, 217, 197, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1257,7 +1229,7 @@ header.header-shrunk .logo-img {
 .method-detail h4 {
   font-family: var(--font-sans);
   font-size: 0.85rem;
-  color: var(--color-text-secondary);
+  color: var(--color-surface); /* Almond Cream */
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 2px;
@@ -1270,12 +1242,15 @@ header.header-shrunk .logo-img {
 }
 
 .method-detail a:hover {
-  color: var(--color-primary);
+  color: var(--color-surface);
 }
 
 .contact-form-wrapper {
   padding: var(--spacing-lg) var(--spacing-md);
-  background: rgba(19, 23, 30, 0.8);
+  background: rgba(236, 236, 234, 0.05); /* Alabaster Grey overlay */
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .inquiry-form {
@@ -1323,7 +1298,7 @@ header.header-shrunk .logo-img {
   left: 0;
   top: 0.8rem;
   font-size: 1rem;
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   pointer-events: none;
   transition: var(--transition-fast);
 }
@@ -1333,17 +1308,17 @@ header.header-shrunk .logo-img {
 .form-input:not(:placeholder-shown) ~ .floating-label {
   top: -1rem;
   font-size: 0.75rem;
-  color: var(--color-primary);
+  color: var(--color-surface);
 }
 
 .form-input:focus {
-  border-color: var(--color-primary);
+  border-color: var(--color-surface);
 }
 
 /* Selection list styling */
 .select-label {
   font-size: 0.75rem;
-  color: var(--color-primary);
+  color: var(--color-surface);
   margin-bottom: 0.3rem;
   font-family: var(--font-display);
   letter-spacing: 0.05em;
@@ -1451,7 +1426,7 @@ header.header-shrunk .logo-img {
 
 /* --- Footer --- */
 footer {
-  background-color: var(--color-bg-darker);
+  background-color: var(--color-primary);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--spacing-lg) 0 0;
 }
@@ -1480,6 +1455,7 @@ footer {
 .footer-brand p {
   font-size: 0.9rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-links h4, .footer-certifications h4 {
@@ -1501,11 +1477,11 @@ footer {
 
 .footer-links a {
   font-size: 0.9rem;
-  color: var(--color-text-secondary);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-links a:hover {
-  color: var(--color-primary);
+  color: var(--color-surface);
   padding-left: 4px;
 }
 
