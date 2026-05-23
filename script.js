@@ -4,55 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   
-  /* --- 1. Custom Cursor Tracking (Desktop Only) --- */
-  const cursor = document.getElementById('custom-cursor');
-  const cursorDot = document.getElementById('custom-cursor-dot');
-  
-  // Only enable custom cursor on devices that support hover (desktops)
-  const hasHover = window.matchMedia('(hover: hover)').matches;
-  
-  if (hasHover && cursor && cursorDot) {
-    cursor.style.display = 'block';
-    cursorDot.style.display = 'block';
-    
-    let cursorX = 0;
-    let cursorY = 0;
-    let targetX = 0;
-    let targetY = 0;
-    
-    // Track mouse movement
-    document.addEventListener('mousemove', (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
-      // Dot is instant
-      cursorDot.style.left = `${targetX}px`;
-      cursorDot.style.top = `${targetY}px`;
-    });
-    
-    // Smooth lerp (interpolation) for the outer circle cursor
-    const renderCursor = () => {
-      cursorX += (targetX - cursorX) * 0.15;
-      cursorY += (targetY - cursorY) * 0.15;
-      
-      cursor.style.left = `${cursorX}px`;
-      cursor.style.top = `${cursorY}px`;
-      
-      requestAnimationFrame(renderCursor);
-    };
-    renderCursor();
-    
-    // Hover effects on links/buttons
-    const hoverElements = document.querySelectorAll('a, button, select, input, textarea, .filter-btn');
-    hoverElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        document.body.classList.add('hovering-link');
-      });
-      el.addEventListener('mouseleave', () => {
-        document.body.classList.add('hovering-link');
-        document.body.classList.remove('hovering-link');
-      });
-    });
-  }
+
 
   /* --- 2. Mobile Navigation Toggle --- */
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');

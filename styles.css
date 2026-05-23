@@ -4,19 +4,19 @@
 
 /* --- CSS Variables & Custom Properties --- */
 :root {
-  /* Color Palette (Premium editorial look) */
-  --color-bg: #0c0e12;             /* Sleek dark slate */
-  --color-bg-darker: #07080a;      /* Deep black for sections */
-  --color-surface: #13171e;        /* Base card/panel background */
+  /* Color Palette (Light/White theme) */
+  --color-bg: #ffffff;             /* Crisp white */
+  --color-bg-darker: #f9f9f9;      /* Light gray for sections */
+  --color-surface: #f4f5f7;        /* Base card/panel background */
   --color-primary: #d4af37;        /* Luxe muted gold */
   --color-primary-rgb: 212, 175, 55;
   --color-primary-hover: #bda032;
   --color-accent: #1e4d2b;         /* Deep emerald/forest green (ethics) */
   --color-accent-light: #2c6e3f;
   --color-accent-rgb: 30, 77, 43;
-  --color-text-primary: #eae3d2;   /* Warm sand/cream */
-  --color-text-secondary: #8f94a0; /* Soft slate grey */
-  --color-text-dark: #0e1116;      /* High contrast black */
+  --color-text-primary: #0e1116;   /* Dark for light background */
+  --color-text-secondary: #5a606d; /* Slate grey */
+  --color-text-dark: #ffffff;      /* High contrast white (for buttons) */
   --color-white: #ffffff;
   --color-error: #e57373;
   --color-success: #81c784;
@@ -36,9 +36,9 @@
   /* Design Accents */
   --border-radius: 12px;
   --border-radius-lg: 24px;
-  --glass-bg: rgba(19, 23, 30, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: rgba(0, 0, 0, 0.25);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.05);
+  --glass-shadow: rgba(0, 0, 0, 0.05);
   
   /* Transition timings */
   --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -101,40 +101,6 @@ a {
   color: inherit;
   text-decoration: none;
   transition: var(--transition-fast);
-}
-
-/* --- Custom Cursor (Dynamic & Editorial) --- */
-.custom-cursor {
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--color-primary);
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-  display: none; /* Enabled on desktop in script.js */
-}
-
-.custom-cursor-dot {
-  width: 6px;
-  height: 6px;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  display: none;
-}
-
-/* Cursor hover classes applied via JS */
-body.hovering-link .custom-cursor {
-  width: 60px;
-  height: 60px;
-  background-color: rgba(212, 175, 55, 0.08);
-  border-color: var(--color-primary);
 }
 
 /* --- Layout Utility Classes --- */
@@ -336,8 +302,6 @@ header {
   height: 100px;
   width: auto;
   object-fit: contain;
-  mix-blend-mode: screen; /* Drops out pure black perfectly */
-  filter: contrast(1.5) brightness(0.7); /* Crushes the dark grey background to black, keeping gold visible */
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s ease;
 }
 
@@ -496,9 +460,9 @@ header {
   @keyframes shrink {
     to {
       height: 80px;
-      background-color: rgba(12, 14, 18, 0.96);
-      border-color: rgba(255, 255, 255, 0.06);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      background-color: rgba(255, 255, 255, 0.96);
+      border-color: rgba(0, 0, 0, 0.06);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     }
   }
 
@@ -525,9 +489,9 @@ header {
 /* Header JS fallback styles (applied via JS class when scroll-driven timeline not supported) */
 header.header-shrunk {
   height: 80px;
-  background-color: rgba(12, 14, 18, 0.96);
-  border-color: rgba(255, 255, 255, 0.06);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.96);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 header.header-shrunk .logo-img {
@@ -568,8 +532,8 @@ header.header-shrunk .logo-img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 60% 40%, rgba(12, 14, 18, 0.4) 0%, rgba(12, 14, 18, 0.95) 80%),
-              linear-gradient(to bottom, rgba(12, 14, 18, 0.1), var(--color-bg));
+  background: radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.95) 80%),
+              linear-gradient(to bottom, rgba(255, 255, 255, 0.1), var(--color-bg));
   z-index: 2;
 }
 
@@ -1157,12 +1121,10 @@ header.header-shrunk .logo-img {
 
 /* --- Sustainability Commitment --- */
 .sustainability-section {
-  padding: var(--spacing-xl) 0;
-  background: linear-gradient(to right, rgba(12, 14, 18, 0.95), rgba(7, 8, 10, 0.95)),
-              url('assets/images/sustainable_atelier.png');
-  background-size: cover;
-  background-position: center;
   position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95)),
+              url('assets/images/thread_spools.jpg') center/cover fixed;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
@@ -1662,7 +1624,7 @@ footer {
 
 /* Respect Reduced Motion Preferences */
 @media (prefers-reduced-motion: reduce) {
-  body *, .custom-cursor, .custom-cursor-dot {
+  body * {
     animation: none !important;
     transition: none !important;
   }
