@@ -4,20 +4,20 @@
 
 /* --- CSS Variables & Custom Properties --- */
 :root {
-  /* Color Palette (Light/White theme) */
-  --color-bg: #ffffff;             /* Crisp white */
-  --color-bg-darker: #f9f9f9;      /* Light gray for sections */
-  --color-surface: #f4f5f7;        /* Base card/panel background */
-  --color-primary: #d4af37;        /* Luxe muted gold */
-  --color-primary-rgb: 212, 175, 55;
-  --color-primary-hover: #bda032;
-  --color-accent: #1e4d2b;         /* Deep emerald/forest green (ethics) */
-  --color-accent-light: #2c6e3f;
-  --color-accent-rgb: 30, 77, 43;
-  --color-text-primary: #0e1116;   /* Dark for light background */
-  --color-text-secondary: #5a606d; /* Slate grey */
-  --color-text-dark: #ffffff;      /* High contrast white (for buttons) */
-  --color-white: #ffffff;
+  /* Color Palette (User Requested Theme) */
+  --color-bg: #f5f5f5;             /* White Smoke */
+  --color-bg-darker: #ececea;      /* Alabaster Grey */
+  --color-surface: #e8d9c5;        /* Almond Cream */
+  --color-primary: #6f4e37;        /* Coffee Bean */
+  --color-primary-rgb: 111, 78, 55;
+  --color-primary-hover: #5a3e2c;  /* Darker Coffee Bean */
+  --color-accent: #a16f68;         /* Smoky Rose */
+  --color-accent-light: #b88a83;   /* Light Smoky Rose */
+  --color-accent-rgb: 161, 111, 104;
+  --color-text-primary: #6f4e37;   /* Coffee Bean for primary text */
+  --color-text-secondary: #a16f68; /* Smoky Rose for secondary text */
+  --color-text-dark: #f5f5f5;      /* White Smoke for button text */
+  --color-white: #f5f5f5;          /* Map white to White Smoke */
   --color-error: #e57373;
   --color-success: #81c784;
 
@@ -460,7 +460,7 @@ header {
   @keyframes shrink {
     to {
       height: 80px;
-      background-color: rgba(255, 255, 255, 0.96);
+      background-color: rgba(245, 245, 245, 0.96);
       border-color: rgba(0, 0, 0, 0.06);
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     }
@@ -489,7 +489,7 @@ header {
 /* Header JS fallback styles (applied via JS class when scroll-driven timeline not supported) */
 header.header-shrunk {
   height: 80px;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(245, 245, 245, 0.96);
   border-color: rgba(0, 0, 0, 0.06);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
@@ -532,8 +532,8 @@ header.header-shrunk .logo-img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.95) 80%),
-              linear-gradient(to bottom, rgba(255, 255, 255, 0.1), var(--color-bg));
+  background: radial-gradient(circle at 60% 40%, rgba(245, 245, 245, 0.4) 0%, rgba(245, 245, 245, 0.95) 80%),
+              linear-gradient(to bottom, rgba(245, 245, 245, 0.1), var(--color-bg));
   z-index: 2;
 }
 
@@ -1123,7 +1123,7 @@ header.header-shrunk .logo-img {
 .sustainability-section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(240, 240, 240, 0.95)),
+  background: linear-gradient(to right, rgba(245, 245, 245, 0.95), rgba(236, 236, 234, 0.95)),
               url('assets/images/thread_spools.jpg') center/cover fixed;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
